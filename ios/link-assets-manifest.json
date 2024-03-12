@@ -1,0 +1,121 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/GT-Super-Display-Bold-Italic-Trial.otf",
+      "sha1": "6ec8b06b117adbed201420411de377e2503ae2ca"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Bold-Trial.otf",
+      "sha1": "9ebefa5a55784e3b8bc6ee8fe0023839fb9d80a5"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Light-Italic-Trial.otf",
+      "sha1": "f099ac9ebf849bcebff955ca76f95035046795a6"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Light-Trial.otf",
+      "sha1": "fa7eded33b42dfe94e377a44d0d1d71cfd982170"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Medium-Italic-Trial.otf",
+      "sha1": "5c9d8ea646186ba52f12df2b0322a6a790e29382"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Medium-Trial.otf",
+      "sha1": "096f7cb3009c1ab1a660ca2614f3eb2094085f72"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Regular-Italic-Trial.otf",
+      "sha1": "7cfb8f9984a5ee016888c51851a87efd91c4827c"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Regular-Trial.otf",
+      "sha1": "e3959b36b335f30364bd910c2aee778d3d2d7519"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Super-Italic-Trial.otf",
+      "sha1": "b9c67b37bb33436ae6df871bcb581d78618a3bc0"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Display-Super-Trial.otf",
+      "sha1": "d04c10cbc9d4d83f44962c4f9546b69b821fdbc1"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Black-Italic-Trial.otf",
+      "sha1": "1373ff53f4a64607033ecdbbedec0a786babc0ba"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Black-Trial.otf",
+      "sha1": "220bbc7cbd427c8a346da958b19480af4bdb8515"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Bold-Italic-Trial.otf",
+      "sha1": "7be8f028063208d87b528282511f8dacea58c728"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Bold-Trial.otf",
+      "sha1": "0c85c3258579c8cf43852bfbd9127472a8efe783"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Book-Italic-Trial.otf",
+      "sha1": "02ae6064b34d7c6c456ce8fa64d813305d49a015"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Book-Trial.otf",
+      "sha1": "273b0b074ff0ded546416f01b6729e214bd5d8ad"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Medium-Italic-Trial.otf",
+      "sha1": "98c373218cf450ce159afa16860a05777a93c0b6"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Medium-Trial.otf",
+      "sha1": "0b848708b99d69c2ec8edf89b37447d963885f41"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Regular-Italic-Trial.otf",
+      "sha1": "13c51088b69848e8a494074b252eb894120863c8"
+    },
+    {
+      "path": "assets/fonts/GT-Super-Text-Regular-Trial.otf",
+      "sha1": "9ce7780cf1282c332fa5b124324977e5107d5843"
+    },
+    {
+      "path": "assets/fonts/Inter-Black.ttf",
+      "sha1": "f79fa58ace5f55e338c99bf71e7e0702841df6f2"
+    },
+    {
+      "path": "assets/fonts/Inter-Bold.ttf",
+      "sha1": "47ff07c75746682133b81e7ac0537ce50a4c9916"
+    },
+    {
+      "path": "assets/fonts/Inter-ExtraBold.ttf",
+      "sha1": "c9b3d2f2449ab2c67ff075f806973fa3d7e104b3"
+    },
+    {
+      "path": "assets/fonts/Inter-ExtraLight.ttf",
+      "sha1": "f78ee1d6cbfc64f656247c604ef270ef116abbf5"
+    },
+    {
+      "path": "assets/fonts/Inter-Light.ttf",
+      "sha1": "cbb2506d8da21edbb2dc8cfa26e3b42a97d138f8"
+    },
+    {
+      "path": "assets/fonts/Inter-Medium.ttf",
+      "sha1": "e76f580811e031813e7150131a0724811cdd737a"
+    },
+    {
+      "path": "assets/fonts/Inter-Regular.ttf",
+      "sha1": "cfa780d0b50b2bb7eacb82984f1b18a95aaa40c5"
+    },
+    {
+      "path": "assets/fonts/Inter-SemiBold.ttf",
+      "sha1": "5e0c44e57e7e090252d79f622899e67585bb892c"
+    },
+    {
+      "path": "assets/fonts/Inter-Thin.ttf",
+      "sha1": "757805e615c974756646e54ceff8e409d5c47207"
+    }
+  ]
+}
