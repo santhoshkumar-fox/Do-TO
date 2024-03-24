@@ -1,20 +1,27 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {ActivityIndicator, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useState} from 'react';
 import {SIZE, FONTS, COLORS, IMAGES} from '../constants';
 import InputText from '../components/InputText';
 import Feather from 'react-native-vector-icons/Feather';
 import Animated, { FadeOut, LinearTransition, SlideInDown, ZoomIn, ZoomOut } from 'react-native-reanimated';
 import { BlurView } from '@react-native-community/blur';
+import { Account, Client, ID } from 'appwrite';
+import { signUpCallback } from '../service/appWriteService';
+import { TOAST_STATUS, showToast } from '../components/toasts';
 const SignUpScreen = ({navigation}) => {
   const [isSecure, setIsSecure] = useState(true);
+  const [isLoading,setisLoading] = useState(false);
   const [cred, setCred] = useState({
     user:'',
     email: '',
     password: '',
   });
   const [isCheck,setIsCheck] = useState(false);
+  
+  
   return (
     <View style={styles.mainContainer}>
+     <StatusBar backgroundColor={'black'}/>
       <Animated.View layout={LinearTransition} 
        entering={SlideInDown.delay(300).springify().damping(14).stiffness()}
       style={{width:'100%',marginBottom:32}}>
@@ -128,7 +135,7 @@ const SignUpScreen = ({navigation}) => {
            {
             isCheck && 
             <Animated.View entering={ZoomIn.springify()}   style={{width:18,height:18,backgroundColor:COLORS.primarColor,alignItems:"center",justifyContent:"center",borderRadius:4}}>
-              <Feather name={'check'} size={12}/>
+              <Feather name={'check'} size={12} color={'black'}/>
             </Animated.View>
            }
           </TouchableOpacity>
@@ -137,13 +144,13 @@ const SignUpScreen = ({navigation}) => {
           
            style={{marginLeft:7,alignItems:"center",justifyContent:"center",flexDirection:"row"}}>
            <Text style={{...FONTS.lable03,color:'white',marginVertical:SIZE.margin}}>New to our platform?</Text>
-           <TouchableOpacity 
+           {/* <TouchableOpacity 
            onPress={()=>{
             navigation.navigate('signUp')
            }}
            >
            <Text style={{...FONTS.lable03,color:COLORS.primarColor,marginLeft:3}}>Create an account</Text>
-           </TouchableOpacity>
+           </TouchableOpacity> */}
 
            </Animated.View>
 
@@ -162,13 +169,25 @@ const SignUpScreen = ({navigation}) => {
               overflow: 'hidden',
             }}>
             <TouchableOpacity
+              onPress={()=>{
+                setisLoading(true);
+                signUpCallback(cred,()=>{
+                showToast(TOAST_STATUS.success,'User created');
+                setisLoading(false);
+                navigation.goBack();
+                
+              },(err)=>{console.log('err');showToast(TOAST_STATUS.error,'Signup failed')},()=>{setisLoading(false)})}}
               style={{
                 flex: 1,
                 alignItems: 'center',
                 justifyContent: 'center',
                 backgroundColor: COLORS.primarColor,
               }}>
-              <Text style={{...FONTS.lable01, color: 'black'}}>Sign Up</Text>
+              {
+                isLoading ? 
+                <ActivityIndicator color={'black'}/>:
+                <Text style={{...FONTS.lable01, color: 'black'}}>Sign Up</Text>
+              }
             </TouchableOpacity>
           </View>
           {/* BTN label */}
@@ -211,7 +230,12 @@ const SignUpScreen = ({navigation}) => {
                 justifyContent: 'center',
                 flexDirection:"row"
                 
-              }}>
+              }}
+              onPress={()=>{
+              showToast(TOAST_STATUS.info,'Google signin WIP',null)
+            }}
+              >
+              
               <View style={{width:18,height:18,marginRight:9}}>
               <Image style={{width:'100%',height:"100%"}} source={IMAGES.google_logo}/>
 

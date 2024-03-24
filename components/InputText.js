@@ -22,7 +22,7 @@ const InputText = ({title, onChangeCallback, containerStyle,initialvalue,disable
           <TextInput
             {...props}
             editable={!disable}
-            placeholderTextColor={COLORS.greyColor}
+            placeholderTextColor={'rgba(255,255,255,.7)'}
             value={initialvalue}
             onChangeText={e => {
               onChangeCallback(e, title);

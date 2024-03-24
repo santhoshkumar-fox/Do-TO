@@ -6,13 +6,18 @@ import Screens from './screens'
 import { NavigationContainer } from '@react-navigation/native';
 import BootSplash from "react-native-bootsplash";
 import { IMAGES } from './constants';
+import Toast from 'react-native-toast-message';
+import { toastConfig } from './components/toasts';
 const App = () => {
+
+
   
 
   useEffect(() => {
     const init = async () => {
       // …do multiple sync or async tasks
     };
+    console.log('🏀')
 
     init().finally(async () => {
       await BootSplash.hide({ fade: true });
@@ -24,6 +29,7 @@ const App = () => {
     <NavigationContainer>
       <StatusBar backgroundColor={'black'}/>
       <Screens/>
+      <Toast config={toastConfig}/>
     </NavigationContainer>
   )
 }
