@@ -64,7 +64,7 @@ const Dashboard = () => {
 
   return (
     <View style={styles.mainContainer}>
-      <StatusBar hidden />
+      <StatusBar backgroundColor={'black'}/>
       {/* appbar */}
       <AppBar user={user}/>
       {/* page title */}
