@@ -176,7 +176,7 @@ const SignUpScreen = ({navigation}) => {
                 setisLoading(false);
                 navigation.goBack();
                 
-              },(err)=>{console.log('err');showToast(TOAST_STATUS.error,'Signup failed')},()=>{setisLoading(false)})}}
+              },(err)=>{console.log('err');setisLoading(false);;showToast(TOAST_STATUS.error,'Signup failed')},()=>{setisLoading(false)})}}
               style={{
                 flex: 1,
                 alignItems: 'center',

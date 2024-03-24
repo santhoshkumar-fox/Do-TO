@@ -76,7 +76,6 @@ const TodoFormList = ({type,initialData,userData,onCloseCallback}) => {
           textFieldContainerStyle={{...FONTS.body01,color:"white"}}
           placeholder={'Title'}
           placeholderTextColor={'white'}
-
           autoCapitalize="words"
         />
 
@@ -96,7 +95,6 @@ const TodoFormList = ({type,initialData,userData,onCloseCallback}) => {
           placeholder={'Descritpion'}
           placeholderTextColor={'white'}
           multiline={true}
-          autoCapitalize="words"
         />
 
 

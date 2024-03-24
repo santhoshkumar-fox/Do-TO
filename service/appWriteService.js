@@ -13,13 +13,11 @@ const client = new Client()
   const teams = new Teams(client);
 
   export const signUpCallback = (cred,onSuccessCallback,onErrorCallback,onSettleCallback) => {
-    console.log(cred)
     try {
       if((cred.email).trim() != '' && cred.password.trim() != '' && cred.user){
         const promise = account.create(ID.unique(),cred.email.trim(),cred.password,cred.user.trim());
         promise.then(
           (response)=>{
-            console.log(response); 
             onSuccessCallback();
             onSettleCallback()
             // Success
@@ -82,7 +80,6 @@ const DB = new Databases(client)
 
 export const postData = async(value,onSuccessCallback,onErrorCallback)=>{
   try {
-    console.log(value)
     const res  = await DB.createDocument(db_id,todo_list_collection_id,ID.unique(),value)
     if(!!res.$collectionId){
       onSuccessCallback();
@@ -113,7 +110,6 @@ export const getData = async(queryValue=[],onSuccessCallback=()=>{},onErrorCallb
 
 export const putData = async(value,docID,onSuccessCallback,onErrorCallback)=>{
   try {
-    console.log(value)
     const res  = await DB.updateDocument(db_id,todo_list_collection_id,docID,value)
     // createDocument(db_id,todo_list_collection_id,ID.unique(),value)
     if(!!res.$collectionId){
@@ -131,7 +127,6 @@ export const putData = async(value,docID,onSuccessCallback,onErrorCallback)=>{
 export const DeleteData = async(docID,onSuccessCallback,onErrorCallback)=>{
   try {
     const res  = await DB.deleteDocument(db_id,todo_list_collection_id,docID)
-    console.log(res)
     if(!!res.message == ''){
       onSuccessCallback();
       return res

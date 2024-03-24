@@ -40,7 +40,6 @@ const Dashboard = () => {
       Query.equal("email",[value?.email])
      ]
      const values = await getData(queryValue,()=>{},(err)=>{console.log('err',err)});
-     console.log(values);
      setTodoData(()=>([...values]))
   }
   useEffect(() => {

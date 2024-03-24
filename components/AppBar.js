@@ -6,13 +6,15 @@ import Feather from "react-native-vector-icons/Feather"
 import Animated, { SlideInLeft, SlideInUp, SlideOutUp } from 'react-native-reanimated'
 import { TOAST_STATUS, showToast } from './toasts'
 const AppBar = ({user}) => {
+  
   return (
+  
     <Animated.View entering={SlideInUp} exiting={SlideOutUp} style={styles.mainContainer}>
      {/* profile */}
 
      <View style={{flex:1,height:'100%',alignItems:"center",flexDirection:"row"}}>
      <View style={{width:25,height:25,backgroundColor:COLORS.primarColor,borderRadius:15,alignItems:"center",justifyContent:"center"}}>
-        <Text style={{...FONTS.lable03}}>{String((user?.name?.split(' '))?.map((el)=>(el?.[0])).join()).toLocaleUpperCase()}</Text>
+        <Text style={{...FONTS.lable03}}>{String((user?.name?.split(' '))?.map((el)=>(el?.[0])).join().replace(',',"")).toLocaleUpperCase()}</Text>
      </View>
      <Animated.View entering={SlideInLeft.delay(300)} style={{flexDirection:"row",alignItems:"center",overflow:"hidden"}} >
         
@@ -20,6 +22,7 @@ const AppBar = ({user}) => {
        
        <Text numberOfLines={1} ellipsizeMode='tail' style={{...FONTS.lable03,marginLeft:5,color:"white"}}>{(user.name)}</Text>
      </Animated.View>
+
      </View>
 
      {/* notifications */}
@@ -53,12 +56,13 @@ const styles = StyleSheet.create({
     mainContainer:{
         width:SIZE.width,
         height:50,
+        marginTop:10,
         backgroundColor:"black",
         // borderBottomColor:"white",
         // borderBottomWidth:StyleSheet.hairlineWidth,
         alignItems:"center",
         flexDirection:"row",
         justifyContent:"space-between",
-        paddingHorizontal:10,
+        paddingHorizontal:20,
     }
 })
